@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <title>Kanvan Board</title>
+        <script>
+        $(document).ready(function(){
+            $(function() {
+                $( "#draggable" ).draggable({ snap: true,snap: ".ui-widget-content",snapMode: "outer",containment: ".body"});
+                $( "#draggable1" ).draggable({ snap: true, snap:".ui-widget-content",snapMode: "outer",containment: ".body"});
+                $( "#draggable2" ).draggable({ snap: true, snap:".ui-widget-content",snapMode: "outer",containment: ".body"});
+                $( "#draggable3" ).draggable({ snap: true, snap:".ui-widget-content",snapMode: "outer",containment: ".body"});
+                $( "#draggable4" ).draggable({ snap: true, snap:".ui-widget-content",snapMode: "outer",containment: ".body"});
+                $( "#draggable5" ).draggable({ snap: true, snap:".ui-widget-content",snapMode: "outer",containment: ".body"});
+
+            })
+        });
+
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <ul>
+                    <li class="headerBox"><p>To-do</p></li>
+                    <li class="headerBox"><p>In-progress</p></li>
+                    <li class="headerBox"><p>For Approval</p></li>
+                    <li class="headerBox"><p>Testing</p></li>
+                    <li class="headerBox"><p>Done</p></li>
+                </ul>
+            </div>
+            <div id="snaptarget" class="ui-widget-content snap "></div>
+            <div class="body">
+                <div class="bodyBox">
+                    <div id="draggable" class="draggable ui-widget-content"> 
+                      <div class="task"><p>Front-end UI Design</p></div>
+                        <img class ="taskOwner" src="male.png">
+                    </div>
+                      <div id="draggable1" class="draggable ui-widget-content">
+                        <div class="task"><p>Web Content</p></div>
+                        <img class ="taskOwner" src="female.png">
+                      </div>
+                      <div id="draggable2" class="draggable ui-widget-content">
+                        <div class="task"><p>Back-end Logic Design</p></div>
+                        <img class ="taskOwner" src="male.png">
+                      </div>
+                      <div id="draggable3" class="draggable ui-widget-content">
+                        <div class="task"><p>Database Design</p></div>
+                        <img class ="taskOwner" src="male.png">
+                      </div>
+                      <div id="draggable4" class="draggable ui-widget-content">
+                        <div class="task"><p>Plug-ins</p></div>
+                        <img class ="taskOwner" src="male.png">
+                      </div>
+                      <div id="draggable5" class="draggable ui-widget-content">
+                        <div class="task"><p>Documentation</p></div>
+                        <img class ="taskOwner" src="female.png">
+                      </div>
+                </div>
+                <div class="bodyBox"></div>
+                <div class="bodyBox"></div>
+                <div class="bodyBox"></div>
+                <div class="bodyBox"></div>
+            </div>
+        </div>
+    </body>
+</html>
